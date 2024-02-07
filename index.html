@@ -1,0 +1,70 @@
+<!-- 
+     Code Author : Aditya Mishra 
+     Date : December 28 , 2023 
+     Description : This is a simple software developed using HTML,CSS and JavaScript that allows users to add text to any picture at any position.
+                   Refer to the user guide document for more information.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Editor</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
+</head>
+
+<body>
+  <!-- to import image  -->
+  <input type="file" id="imageInput" accept="image/*">
+
+  <!-- to display the image -->
+  <canvas id="imageCanvas" width="500" height="500"></canvas>
+
+  <!-- form for text input to be added on the picture -->
+  <label for="text">Write Text:</label>
+  <input type="text" id="text" placeholder="This is Aditya's pic">
+
+  <!-- select font style -->
+  <label for="font">Select Font:</label>
+  <select id="font">
+    <option value="Arial">Arial</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="Courier New">Courier New</option>
+    <option value="Comic Sans MS">Comic Sans MS</option>
+    <option value="Tahoma">Tahoma</option>
+    <option value="Trebuchet MS">Trebuchet MS</option>
+    <option value="Palatino Linotype">Palatino Linotype</option>
+    <option value="Impact">Impact</option>
+    <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+  </select>
+
+  <!-- input for font size -->
+  <label for="fontSize">Font Size:</label>
+  <input type="number" id="fontSize" value="30">
+
+  <!-- Input for text color -->
+  <label for="color">Select Text Color:</label>
+  <input type="color" id="color" value="#000000">
+
+  <!-- Inputs for X and Y coordinates -->
+  <label for="coordX">X Coordinate:</label>
+  <input type="number" id="coordX" value="100">
+  <label for="coordY">Y Coordinate:</label>
+  <input type="number" id="coordY" value="100">
+
+  <!-- Buttons to perform actions : add text , undo , redo and save image to system -->
+  <button onclick="addText()">Add Text</button>
+  <button onclick="undo()">Undo</button>
+  <button onclick="redo()">Redo</button>
+  <button onclick="saveImage()">Save Image</button>
+
+  <!-- Link to external JavaScript file -->
+  <script src="JavaScript.js"></script>
+
+</body>
+
+</html>
